@@ -1,1 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: transparent;
+    }
 
+    model-viewer {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      --poster-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <model-viewer
+    src="./xl-pavers_-_saint_henry_blacktm.glb"
+    alt="XL Pavers Saint Henry Black"
+    camera-controls
+    auto-rotate
+    auto-rotate-delay="0"
+    rotation-per-second="1.2deg"
+    camera-target="0m 0.75m 0m"
+    camera-orbit="45deg 70deg 2.8m"
+    min-camera-orbit="auto 60deg auto"
+    max-camera-orbit="auto 84deg auto"
+    field-of-view="19deg"
+    min-field-of-view="17deg"
+    max-field-of-view="22deg"
+    interaction-prompt="none"
+    touch-action="pan-y"
+    shadow-intensity="0"
+    exposure="1"
+    environment-image="neutral"
+    loading="eager"
+    reveal="auto">
+  </model-viewer>
+</body>
+</html>
